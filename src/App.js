@@ -5,7 +5,7 @@ import ChatUI from './components/Chat_UI/chat-ui';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/NOKi-chat-interface">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/chat" element={<ChatUI />} />
