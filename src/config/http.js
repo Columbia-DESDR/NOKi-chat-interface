@@ -2,9 +2,9 @@ import axios from "axios";
 import {get} from "lodash";
 
 export const axiosInstance = axios.create({
-  // baseURL: 'http://localhost:5000', // for local testing
+  // baseURL: 'http://localhost:8000', // for local testing
   baseURL: 'https://fist-noki.iri.columbia.edu/',// for prod
-  withCredentials: true 
+  withCredentials: true , 
 });
 
 axiosInstance.interceptors.request.use(
@@ -30,7 +30,7 @@ axiosInstance.interceptors.response.use(
   function (error) {
     console.log('oops: ', get(error, 'response.status'))
     if (get(error, 'response.status') === 401) {
-      window.location.href = window.location.origin + '/login'
+      window.location.href = window.location.origin + '/chat'
     }
     return Promise.reject(error);
   }

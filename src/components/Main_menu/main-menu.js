@@ -11,6 +11,9 @@ const HomePage = () => {
   const startNewChat = () => {
     navigate("/chat"); // Navigate to the chat page or initiate a new chat
   };
+  const session = () => {
+    navigate("/session"); // Navigate to the chat page or initiate a new chat
+  };
 
   return (
     <PageWrapper>
@@ -24,6 +27,8 @@ const HomePage = () => {
       </LeftLogoPane>
       <RightFormPane>
         <Button onClick={startNewChat}>New Chat</Button>
+        <Button onClick={session}>session</Button>
+
       </RightFormPane>
     </PageWrapper>
   );
