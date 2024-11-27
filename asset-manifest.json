@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/NOKi-chat-interface/static/css/main.e6c13ad2.css",
-    "main.js": "/NOKi-chat-interface/static/js/main.bbaaa248.js",
+    "main.js": "/NOKi-chat-interface/static/js/main.98efab20.js",
     "static/js/453.93c6a8b5.chunk.js": "/NOKi-chat-interface/static/js/453.93c6a8b5.chunk.js",
     "static/media/columbia_logo.png": "/NOKi-chat-interface/static/media/columbia_logo.0aff10e439f53a5e0590.png",
     "static/media/IRI_logo.jpg": "/NOKi-chat-interface/static/media/IRI_logo.7e75b98a4445313237fb.jpg",
     "index.html": "/NOKi-chat-interface/index.html",
     "main.e6c13ad2.css.map": "/NOKi-chat-interface/static/css/main.e6c13ad2.css.map",
-    "main.bbaaa248.js.map": "/NOKi-chat-interface/static/js/main.bbaaa248.js.map",
+    "main.98efab20.js.map": "/NOKi-chat-interface/static/js/main.98efab20.js.map",
     "453.93c6a8b5.chunk.js.map": "/NOKi-chat-interface/static/js/453.93c6a8b5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.bbaaa248.js"
+    "static/js/main.98efab20.js"
   ]
 }
