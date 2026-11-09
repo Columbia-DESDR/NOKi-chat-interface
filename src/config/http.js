@@ -1,19 +1,17 @@
 import axios from "axios";
-import {get} from "lodash";
 
 export const axiosInstance = axios.create({
   // baseURL: 'http://localhost:8000', // for local testing
   baseURL: 'https://fist-noki.iri.columbia.edu/',// for prod
-  withCredentials: true , 
+  withCredentials: true ,
 });
 
 axiosInstance.interceptors.request.use(
   function (config) {
     // Do something before request is sent
-    console.log(config)
     const authToken = localStorage.getItem("auth");
     if (authToken) {
-      config.headers = {...config.headers, Authorization: 'Bearer ' + authToken}
+      config.headers.Authorization = 'Bearer ' + authToken;
     }
     return config;
   },
@@ -28,9 +26,13 @@ axiosInstance.interceptors.response.use(
     return response;
   },
   function (error) {
-    console.log('oops: ', get(error, 'response.status'))
-    if (get(error, 'response.status') === 401) {
-      window.location.href = window.location.origin + '/chat'
+    const status = error.response?.status;
+    console.log('oops: ', status)
+    // Send the user back to the home page (respecting the GitHub Pages
+    // basename). Skip if already there to avoid a reload loop.
+    const home = process.env.PUBLIC_URL + '/';
+    if (status === 401 && window.location.pathname !== home) {
+      window.location.href = window.location.origin + home;
     }
     return Promise.reject(error);
   }

@@ -91,8 +91,12 @@ export const SendButton = styled.button`
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: #45a049;
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: default;
   }
 `;
 
