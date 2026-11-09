@@ -1,8 +1,12 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  // baseURL: 'http://localhost:8000', // for local testing
-  baseURL: 'https://fist-noki.iri.columbia.edu/',// for prod
+  // In `npm start`, call the dev server, which forwards to Noki (see "proxy" in
+  // package.json). The session cookie then belongs to localhost, so the browser
+  // keeps sending it and the game state survives between messages.
+  baseURL: process.env.NODE_ENV === 'development'
+    ? '/'
+    : 'https://fist-noki.iri.columbia.edu/', // for prod
   withCredentials: true ,
 });
 

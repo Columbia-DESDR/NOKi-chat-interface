@@ -2,6 +2,7 @@
   "name": "chat-interface",
   "version": "0.1.0",
   "homepage": "https://Columbia-DESDR.github.io/NOKi-chat-interface",
+  "proxy": "https://fist-noki.iri.columbia.edu",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.3",
